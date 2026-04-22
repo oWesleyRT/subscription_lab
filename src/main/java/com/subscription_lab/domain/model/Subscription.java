@@ -26,16 +26,17 @@ public class Subscription {
     @UuidGenerator
     private UUID id;
 
-    @NotNull
+    @Column(nullable = false)
     private UUID customerId;
 
-    @NotNull
+    @Column(nullable = false)
     private UUID planId;
 
-    @NotNull
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private SubscriptionStatus status;
 
