@@ -1,5 +1,6 @@
 package com.subscription_lab.api.v1.dto;
 
+import com.subscription_lab.core.enums.PaymentMethod;
 import jakarta.validation.constraints.NotBlank;
 
 public record SubscriptionDTO(
@@ -8,6 +9,6 @@ public record SubscriptionDTO(
         @NotBlank
         String planId,
         @NotBlank
-        String paymentMethod
+        PaymentMethod paymentMethod
 ) {
 }

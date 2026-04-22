@@ -1,5 +1,6 @@
 package com.subscription_lab.core.messaging;
 
+import com.subscription_lab.core.enums.PaymentMethod;
 import com.subscription_lab.core.enums.SubscriptionStatus;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class SubscriptionCreatedEvent {
 
     private UUID planId;
 
-    private String paymentMethod;
+    private PaymentMethod paymentMethod;
 
     private SubscriptionStatus status;
 
