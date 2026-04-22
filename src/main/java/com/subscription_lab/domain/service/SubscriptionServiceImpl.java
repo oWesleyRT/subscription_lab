@@ -21,8 +21,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
 
     public UUID create(SubscriptionDTO dto) {
         var entity = Subscription.builder()
-                        .customerId(UUID.fromString(dto.customerId()))
-                        .planId(UUID.fromString(dto.planId()))
+                        .customerId(dto.customerId())
+                        .planId(dto.planId())
                         .paymentMethod(dto.paymentMethod())
                         .status(SubscriptionStatus.PENDING)
                         .createdAt(LocalDateTime.now())
